@@ -80,7 +80,6 @@ public class MainActivity extends AppCompatActivity implements View.OnDragListen
 //            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
         final NetworkImageView pdfImage = (NetworkImageView) findViewById(R.id.pdf_image);
         pdfImage.setImageUrl("https://dl.dropboxusercontent.com/u/109249235/pdf.jpg",mImageLoader);
-
         pdfImage.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
@@ -130,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements View.OnDragListen
         View draggedImageView = (View) dragEvent.getLocalState();
 
         // Handles each of the expected events
-        switch (dragEvent.getAction()) {
+            switch (dragEvent.getAction()) {
 
             case DragEvent.ACTION_DRAG_STARTED:
                 Log.i(TAG, "drag action started");
